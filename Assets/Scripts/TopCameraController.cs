@@ -17,7 +17,6 @@ public class TopCameraController : MonoBehaviour
     {
         Vector3 desiredPosition = target.transform.position + offset;
         transform.position = desiredPosition;
-
         transform.LookAt(target.transform.position);
     }
 }

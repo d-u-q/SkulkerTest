@@ -29,22 +29,22 @@ public class PlayerManager : MonoBehaviour
         if (Input.GetKey(KeyCode.W))    //straight ahead
         {
             animator.SetFloat(speedFloatHash, speed);
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, -90, 0));
         }
         if (Input.GetKey(KeyCode.A))    //left
         {
             animator.SetFloat(speedFloatHash, speed);
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 270, 0));
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
         }
         if (Input.GetKey(KeyCode.S))    //backwards
         {
             animator.SetFloat(speedFloatHash, speed);
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 180, 0));
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 90, 0));
         }
         if (Input.GetKey(KeyCode.D))    //right
         {
             animator.SetFloat(speedFloatHash, speed);
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 90, 0));
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
         }
 
         //if not moving, stop the character
