@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -848,6 +848,7 @@ MonoBehaviour:
   wepInHand: {fileID: 1119714333}
   wepOnGround: {fileID: 558139317}
   overheat: {fileID: 659310408}
+  animator: {fileID: 1406534300}
   isInHand: 0
   projectile: {fileID: 6237627853472719621, guid: 481e97e046ef01240b55444ed6fb0612,
     type: 3}
@@ -6398,6 +6399,7 @@ MonoBehaviour:
   wepInHand: {fileID: 731490473}
   wepOnGround: {fileID: 558139317}
   overheat: {fileID: 659310408}
+  animator: {fileID: 0}
   isInHand: 0
   projectile: {fileID: 6237627853472719621, guid: 481e97e046ef01240b55444ed6fb0612,
     type: 3}
@@ -6764,7 +6766,6 @@ GameObject:
   - component: {fileID: 1461339885}
   - component: {fileID: 1461339884}
   - component: {fileID: 1461339883}
-  - component: {fileID: 1461339887}
   m_Layer: 2
   m_Name: Stairs
   m_TagString: Stairs
@@ -6845,18 +6846,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -33.61}
---- !u!114 &1461339887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461339882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec6b6caecd329904c96e3ddb1a04af5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1605363147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400096, guid: 765e2fde8c84f094e99304c6198491ea,
