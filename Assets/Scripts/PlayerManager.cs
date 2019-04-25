@@ -9,13 +9,16 @@ public class PlayerManager : MonoBehaviour
     
     private int speedFloatHash;
     private int crouchBoolHash;
+    private int on_stairsBoolHash;
     private bool crouched = false;
+    private bool on_stairs = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         speedFloatHash = Animator.StringToHash("speed");
         crouchBoolHash = Animator.StringToHash("crouch");
+        on_stairsBoolHash = Animator.StringToHash("on_stairs");
     }
 
     void Update()
@@ -45,6 +48,11 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetFloat(speedFloatHash, speed);
             transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0, 0, 0));
+        }
+
+        if (Input.GetKey(KeyCode.T))    //right
+        {
+            animator.SetFloat(speedFloatHash, 10f);
         }
 
         //if not moving, stop the character
