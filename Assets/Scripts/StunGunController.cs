@@ -7,6 +7,10 @@ public class StunGunController : MonoBehaviour
     [SerializeField] private GameObject wepInHand;
     [SerializeField] private GameObject wepOnGround;
     [SerializeField] private ParticleSystem overheat;
+    [SerializeField] private Animator animator;
+
+    private int gunBoolHash;
+
     public bool isInHand = false; //Used in ShootingController to test if the taser is in the player's hand
     public Rigidbody projectile;
     public float speed = 20;
@@ -16,7 +20,9 @@ public class StunGunController : MonoBehaviour
 
     void Start()
     {
-        wepInHand.SetActive(false);        
+        wepInHand.SetActive(false);
+        gunBoolHash = Animator.StringToHash("has_gun");
+        animator.SetBool(gunBoolHash, false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,6 +31,7 @@ public class StunGunController : MonoBehaviour
         {
             wepInHand.SetActive(true);
             wepOnGround.SetActive(false);
+            animator.SetBool(gunBoolHash, true);
             overheat.Clear();
         }
     }
@@ -44,7 +51,7 @@ public class StunGunController : MonoBehaviour
     {
         if (isInHand && !wepOnGround.active && cooldown <= 0) {
             instantiatedProjectile = Instantiate(projectile, transform.position, transform.rotation) as Rigidbody;
-            instantiatedProjectile.transform.Rotate(90, 0, 0, Space.Self);
+            instantiatedProjectile.transform.Rotate(90, 0, 0);
             instantiatedProjectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
             cooldown = 10.0f;
             overheat.Emit(1);
