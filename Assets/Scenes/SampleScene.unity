@@ -6375,13 +6375,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119714333}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.09, y: -0.03, z: 0.03}
+  m_LocalRotation: {x: 0.500013, y: 0.49998698, z: 0.500013, w: 0.49998704}
+  m_LocalPosition: {x: 0.48881072, y: -0.03231955, z: 0.058218926}
   m_LocalScale: {x: 0.04, y: 0.06, z: 0.19}
   m_Children:
   - {fileID: 731490474}
   - {fileID: 659310409}
-  m_Father: {fileID: 1861743291}
+  m_Father: {fileID: 1877144949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!114 &1119714335
@@ -6399,7 +6399,7 @@ MonoBehaviour:
   wepInHand: {fileID: 731490473}
   wepOnGround: {fileID: 558139317}
   overheat: {fileID: 659310408}
-  animator: {fileID: 0}
+  animator: {fileID: 1406534300}
   isInHand: 0
   projectile: {fileID: 6237627853472719621, guid: 481e97e046ef01240b55444ed6fb0612,
     type: 3}
@@ -7009,12 +7009,6 @@ Transform:
   m_Father: {fileID: 1035175778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1861743291 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400082, guid: 58afb2a995b264b4d882bef580ffcfb9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1937341205}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1868569172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7107,6 +7101,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868569172}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1877144949 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400078, guid: 58afb2a995b264b4d882bef580ffcfb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1937341205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1879379370
 GameObject:
   m_ObjectHideFlags: 0

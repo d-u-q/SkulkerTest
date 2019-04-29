@@ -13,8 +13,9 @@ public class TopCameraController : MonoBehaviour
     void Awake()
     {
         offset = transform.position - target.transform.position;
-        behind = offset;
-        above = new Vector3(.11f, 8.27f, -7.57f);        
+        behind = new Vector3 (0f, 3.47f, -7.8f);
+        above = new Vector3(.11f, 8.27f, -7.57f);
+        transform.position = behind;
     }
 
     void LateUpdate()

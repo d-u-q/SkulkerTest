@@ -22,7 +22,7 @@ public class StunGunController : MonoBehaviour
     {
         wepInHand.SetActive(false);
         gunBoolHash = Animator.StringToHash("has_gun");
-        animator.SetBool(gunBoolHash, false);
+        //animator.SetBool(gunBoolHash, false);
     }
 
     private void OnTriggerEnter(Collider other)
