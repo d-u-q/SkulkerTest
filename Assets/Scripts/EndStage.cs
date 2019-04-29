@@ -10,7 +10,7 @@ public class EndStage : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             //CHANGE THIS TO BE NEXT SCENE
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("Hangar", LoadSceneMode.Single);
         }
     }
 }
