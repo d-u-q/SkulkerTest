@@ -17,9 +17,11 @@ public class ButtonController : MonoBehaviour
         if (Vector3.Distance(player.transform.position, gameObject.transform.position) <= 1.5f) {
             toolTip.SetActive(true);
             Interact();
-        } 
-        door.transform.rotation = Quaternion.Slerp(door.transform.rotation, Quaternion.Euler( (open ? 0 : -90) , 0, 0), speed * Time.deltaTime);
-        
+        }
+        if (Input.GetKeyDown(KeyCode.T)) {
+            open = !open;
+        }
+        door.transform.rotation = Quaternion.Slerp(door.transform.rotation, Quaternion.Euler( 0,(open ? 180: 90), 0), speed * Time.deltaTime);        
     }
 
     void Interact()

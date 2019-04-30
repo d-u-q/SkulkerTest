@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float stunTimerInit = 5.0f;
     [SerializeField] float stunTimer;
     [SerializeField] private CapsuleCollider light;
+    [SerializeField] private AudioSource playing;
 
     private int eSpeedFloatHash;
     private int current;
@@ -21,9 +22,9 @@ public class EnemyController : MonoBehaviour
         eSpeedFloatHash = Animator.StringToHash("eSpeed");
         if (stunned) {
             eSpeed = 0f;
-
         }
         light.gameObject.SetActive(!stunned);
+        playing.Play();
     }
 
     void Update()
@@ -39,7 +40,7 @@ public class EnemyController : MonoBehaviour
         {
             //TODO: add a wait timer here
             current = (current + 1) % target.Length;
-        }
+        }        
     }
 
     private void OnCollisionEnter(Collision collision)
