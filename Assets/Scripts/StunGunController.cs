@@ -18,11 +18,10 @@ public class StunGunController : MonoBehaviour
     private Rigidbody instantiatedProjectile;
     private GameObject player;
 
-    void Start()
+    void Awake()
     {
-        wepInHand.SetActive(false);
-        gunBoolHash = Animator.StringToHash("has_gun");
-        //animator.SetBool(gunBoolHash, false);
+        //wepInHand.SetActive(false);
+        gunBoolHash = Animator.StringToHash("has_gun");        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +32,7 @@ public class StunGunController : MonoBehaviour
             wepOnGround.SetActive(false);
             animator.SetBool(gunBoolHash, true);
             overheat.Clear();
+            isInHand = true;
         }
     }
 
