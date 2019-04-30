@@ -7,10 +7,7 @@ public class PlayerControllerBeta : MonoBehaviour
 
     public float speed;
     [SerializeField] private Animator animator;
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private AudioSource concrete;
-    [SerializeField] private AudioSource metal;
-    [SerializeField] private AudioSource playing;
+    [SerializeField] private Rigidbody rb;    
 
     public float animSpeed;
     private int speedFloatHash;
@@ -40,16 +37,12 @@ public class PlayerControllerBeta : MonoBehaviour
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
-        playing = concrete;
+        float moveVertical = Input.GetAxisRaw("Vertical");        
 
         Vector3 dir = new Vector3(moveHorizontal, rb.velocity.y, moveVertical);
         dir = dir.normalized;
         animSpeed = rb.velocity.magnitude;        
-        Move(dir);
-        if (!moving) {
-            playing.Play();
-        }
+        Move(dir);        
     }
 
     void Move(Vector3 movement)
@@ -92,7 +85,6 @@ public class PlayerControllerBeta : MonoBehaviour
     {
         if (collision.gameObject.tag == "Stairs"){
             speed = 200;
-            playing = metal;
         }
 
     }
